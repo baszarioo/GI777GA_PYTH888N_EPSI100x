@@ -79,3 +79,4 @@ def calculate_percentage(price, percentage):
 	return (price * percentage)/100
 	
 	
+typical lambda function + arg:: a=(lambda x : x*x)(8)
