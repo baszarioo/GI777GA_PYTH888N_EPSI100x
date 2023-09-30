@@ -68,3 +68,14 @@ print((lambda x: x**2 + 5*x + 4)(-4))
 ##both returns 0.
 
 
+266		266		266		266
+price=int(input())
+perc=int(input())
+res=(lambda x,y:(x*y(/100)(price, perc)
+print(res)
+
+||
+def calculate_percentage(price, percentage):
+	return (price * percentage)/100
+	
+	
