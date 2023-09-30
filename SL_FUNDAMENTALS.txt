@@ -47,3 +47,12 @@ print(str(a))
 
 ////SETS ...
 tbc//
+
+
+
+LAMBDAS
+-creating a function normally *def* assigns it to a variable with its name automatically. Lambda syntax - approach is most commonly used when passing a simple funtion as an argument to another function. The syntax is shown in the next example and consists of the lambda keyword followed by a list of arguments, a colon, and the expression to evaluate and return>
+def my_func(f, arg):
+	return f(arg)
+
+my_func(lambda x: 2*x*x,5) ;;;	Functions created using the lambda syntax are known as anonymous.
