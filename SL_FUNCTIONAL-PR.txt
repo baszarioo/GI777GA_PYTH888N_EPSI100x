@@ -30,3 +30,18 @@ print(res)		+> [22, 44]
 nums=[1,2,5,8,3,0,7]
 res=list(filter(lambda x: x<5, nums))
 print(res)
+________________________________________________________
+GENERATORS:
+type of iterable, like lists or tuples. 
+ - they dont allow indexing with arbitrary indices, but they still can be iterated through with for loops.
+ - can be created using functions & yield statement.
+ 
+ex:/
+def countdown():
+	i=5;
+	while i>0:
+		yield i
+		i -= 1
+for i in countdown():
+	print(i)				= [ horizontal(poziom) 	vertical(pion) ] 54321 - printed line by line(vertically).
+	
