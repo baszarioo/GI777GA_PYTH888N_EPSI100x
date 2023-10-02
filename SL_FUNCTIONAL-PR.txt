@@ -71,3 +71,22 @@ def  numbers(x):
 print(list(numbers(11)))		+>	[0,2,4,6,8,10]
 	
 // Using generatros results in improved performance, which is the result of the lazy(on demand) generation of value, which translates to lower memory usage. Futhermore, we do not need to wait until all the elements have been generated before we start to use them.
+
+FINDING PRIME NUMBERS using GENERATORS:
+def isPrime(x):
+	if x<2:
+		return False
+	elif x==2:
+		return True
+	for n in range(2, x):
+		if x % n ==0:
+			return False
+	return True
+def primeGenerator(start, end):
+	for num in range(start, end+1):
+		if isPrime(num):
+			yield num
+			
+# Sample usage
+for prime in primeGenerator(10,20):
+	print(prime)
