@@ -90,3 +90,13 @@ def primeGenerator(start, end):
 # Sample usage
 for prime in primeGenerator(10,20):
 	print(prime)
+
+Should be the: 
+	...
+	def primeGenerator(a,b):
+		for i in range(a, b): #there
+			if isPrime(i):
+				yield i
+	f=int(input())
+	t=int(input())
+	print(list(primeGenerator(f, t)))
