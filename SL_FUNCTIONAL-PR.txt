@@ -19,3 +19,14 @@ print(salaries)
 _________________________
 filter:
 The function filter - filters an iterable by leaving only the items that match a condition(also called a predicate)/
+
+np. \
+nums=[11,22,33,44,55]
+res=list(filter(lambda x: x%2==0, nums))
+print(res)		+> [22, 44]
+
+
+-all less than 5\
+nums=[1,2,5,8,3,0,7]
+res=list(filter(lambda x: x<5, nums))
+print(res)
