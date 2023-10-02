@@ -100,3 +100,13 @@ Should be the:
 	f=int(input())
 	t=int(input())
 	print(list(primeGenerator(f, t)))
+	
+
+last exrc:
+def make_word():
+	word=""
+	for ch in "spam":
+		word+=ch
+		yield word
+print(list(make_word()))
+=> ['s', 'sp', 'spa', 'spam']
