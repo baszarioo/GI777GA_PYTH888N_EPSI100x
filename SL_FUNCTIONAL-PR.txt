@@ -1,0 +1,21 @@
+map & filter:
+___________________________	
+-def add_five(x):
+	return x+5
+nums=[11, 22, 33, 44, 55]
+result=list(map(add_five, nums))
+print(result)		+> 	[16,27.38.49,60]
+
+-by using lambda syntax;
+nums=[11,22,33,44,55]
+result=list(map(lambda x: x+5, nums))
+print(result)
+
+exL:
+salaries = [2000,1800,3100,4400,1500]
+bonus=int(input())
+salaries=list(map(lambda x: x+bonus, salaries))
+print(salaries)
+_________________________
+filter:
+The function filter - filters an iterable by leaving only the items that match a condition(also called a predicate)/
