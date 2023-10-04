@@ -148,3 +148,15 @@ def is_odd(x):
 	return not is_even(x)
 print(is_odd(17))
 print(is_even(23)) => TRUE / FALSE.
+
+/// return not ///
+== return (not self.myReturnCode) == return not self.myReturnCode
+it means = if the returncode is 0 -> returns true/ and if the returncode isn't 0 returns FAL.
+== return False if self.myReturnCode else True.
+
+1. If you call is_even(1), it checks if x is 0. Since x is not 0, it cals is_odd(1-1) which is is_odd(0).
+2. The function is_odd(0) returns the opposite of is_even(0). Since is_even(0) return True (because 0 is even), is_odd(0) returns False.
+3. Therefor, is_even(1) returns False, which correctly indicates that 1 is not an even number.
+Now if you call is_odd(1):
+1. It returns the opposite of is_even(1). As we determined above, is_even(1) returns False, so is_odd(1) returns True.
+2. Therefore, is_odd(1) correctly indicates that 1 is an odd number.
