@@ -116,12 +116,13 @@ GENERATOR:
 def invoice_decorator(func):
 	def wrapper(num):
 	print("***")
-	print("INVOICE #" + str(num))
-	print("***")
 	func(num)
+	print("***")
 	print("END OF PAGE")
  return wrapper
 @invoice_decorator
 def invoice(num):
-	print("Invoice details for #" + str(num))
-invoice(input("Enter invoice number: ))
+	print("INVOICE #" +num)
+invoice(input());
+
+||v
