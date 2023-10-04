@@ -160,3 +160,13 @@ it means = if the returncode is 0 -> returns true/ and if the returncode isn't 0
 Now if you call is_odd(1):
 1. It returns the opposite of is_even(1). As we determined above, is_even(1) returns False, so is_odd(1) returns True.
 2. Therefore, is_odd(1) correctly indicates that 1 is an odd number.
+
+
+======
+Ex3:
+def convert(num):
+	if num == 0:
+		return 0
+	else: 
+		return (num %2 + 10 * convert(num // 2))
+print(convert(int(input())))
