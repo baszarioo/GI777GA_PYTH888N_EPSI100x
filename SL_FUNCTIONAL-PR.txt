@@ -111,3 +111,17 @@ def make_word():
 print(list(make_word()))
 => ['s', 'sp', 'spa', 'spam']
 _____________________________________________________________________________________
+GENERATOR:
+# Define the decorator
+def invoice_decorator(func):
+	def wrapper(num):
+	print("***")
+	print("INVOICE #" + str(num))
+	print("***")
+	func(num)
+	print("END OF PAGE")
+ return wrapper
+@invoice_decorator
+def invoice(num):
+	print("Invoice details for #" + str(num))
+invoice(input("Enter invoice number: ))
