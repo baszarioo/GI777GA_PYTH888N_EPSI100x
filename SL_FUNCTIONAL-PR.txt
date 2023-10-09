@@ -239,3 +239,24 @@ Anonymous function:
 a=(lambda x: x*(x+1)) (6)
 print(a)		
 
+
+def fitler_even_numbers(nums):
+    return [num for num in nums if num % 2 == 0]
+nums = [1,2,8,3,7]
+print(filter_even_numbers(nums)) # Output: [2, 8]..
+||
+nums = [1,2,8,3,7]
+res = list(filter(lambda x: x%2==0, nums))
+print(res)
+
+
+def func(**kwargs):
+    print(kwargs["zero"])
+func(a=0, zero=8)       #Output: 8
+
+
+#Which kekyword is used to return a value from a generator?
+== yield.
+____________________________________________________fin.
+come back asp 😶🥠
+
