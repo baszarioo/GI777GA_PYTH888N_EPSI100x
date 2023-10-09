@@ -1,0 +1,66 @@
+CLASSES______________________________________
+ex1:
+class Cat:
+    def __init__(self,color,legs):
+        self.color=color
+        self.legs = legs
+felx=Cat("ginger",4)
+rover=Cat("dog-colored",4)
+stumpy=Cat("brown",3)
+
+
+__init__ :
+the most important method in a class.   #in other words called class constructor
+all methods must have self as their first parameter.
+ex:
+class Cat:
+    def __init__(self,color,legs):
+        self.color=color
+        self.legs=legs
+felx=Cat("ginger", 4)
+print(felix.color)  #Output:    ginger
+
+
+class Student:
+    def __init__ (self,name):
+        self.name= name
+test = Student("Bob")
+
+
+++ METHODS:
+ex:
+class Dog:
+    def __init__(self,name,color):
+        self.name=name
+        self.color=color
+    def bark(self):
+        print("Woof!")
+fido=Dog("Fido", "brown")
+print(fido.name)
+fido.bark()     #Output:    Fido\n Woof!    // '\n'==new line- do not exist in actual output.
+
+
+ex: * You are making videogame! *
+class Player:
+    def __init__(self,name,level):
+        self.name=name
+        self.level=level
+    def intro(self):
+        return f"{self.name} (Level {self.level})"
+name=input("Enter player's name: ")
+level=input("ENter player's level: ")
+player=Player(name,int(level))
+print(player.intro())
+||
+class Player:
+    def __init__(self,name,level):
+        self.name=name
+        self.level=level
+    def intro(self):
+        print(self.name + " (Level "+ self.level +")")
+name=input()
+level=input()
+palyer=Player(name,level)
+player.intro()
+
+CLASSES______________________________________
