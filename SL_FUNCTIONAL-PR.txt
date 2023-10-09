@@ -219,3 +219,23 @@ def my_min(x,y,*args):
 print(my_min(8,13,4,42,120,7))
 
 ________________________________________________________
+MODULE: REVISION:
+nums={1,2,3,4,5,6}
+nums={0,1,2,3} & nums
+nums=filter(lambda x:x>1, nums)
+print(len(list(nums)))			+> 2
+
+
+power math func example:
+def power(x,y):
+	if y==0:
+		return 1
+	else: 
+		return x*power(x,y-1)
+print(power(2,3))		+> 8
+
+
+Anonymous function:
+a=(lambda x: x*(x+1)) (6)
+print(a)		
+
