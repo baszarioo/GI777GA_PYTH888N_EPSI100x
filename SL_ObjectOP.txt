@@ -194,3 +194,16 @@ class SpecialString:
     def __init__(self,cont):
         self.cont=cont
     def __gt__(self,other):
+        for index in range(len(other.cont)+1):
+            result=other.cont[:index]+">"+self.cont
+            result+=">"+other.cont[index:]
+            print(result)
+spam = SpecialString("spam")
+eggs = SpecialString("eggs")
+spam > eggs     #Output:  >spam>eggs\n  e>spam>ggs\n   eg>spam>gs\n    egg>spam>s\n   eggs>spam>
+
+
+magic_methods_for_making_classes_act_like_containers/
+__len__ for len()
+__getitem__ for indexing
+__setitem__ assigning indexed values
