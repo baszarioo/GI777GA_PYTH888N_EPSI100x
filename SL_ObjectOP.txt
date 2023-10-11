@@ -168,3 +168,29 @@ __or__ for |
 
 
 EX2:
+class SpecialString:
+    def __init__(self,cont):
+        self.cont=cont
+    def __truediv__(self,other):
+        line="=" * len(other.cont)
+            return "\n".join([self.cont, line, other.cont])
+spam = SpecialString("spam")
+hello =SpecialString("Hello world!")
+print(spam / hello)     #Output:    spam\n =============\n Hello world!
+
+
+/What is A() ^ B() evaluated as, if A doesn't implement any magic methods?/     # B().__rxor__(A())
+
+#MagicMethodsForComparisons:
+__lt__ for <
+__le__ for <=
+__eq__ for ==
+__ne__ for !=
+__gt__ for >
+__ge__ for >=       #if __ne__ is not implemented, it returs the opposite of __eq__.
+
+EX:
+class SpecialString:
+    def __init__(self,cont):
+        self.cont=cont
+    def __gt__(self,other):
