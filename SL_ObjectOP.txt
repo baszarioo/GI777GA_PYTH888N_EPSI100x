@@ -207,3 +207,22 @@ magic_methods_for_making_classes_act_like_containers/
 __len__ for len()
 __getitem__ for indexing
 __setitem__ assigning indexed values
+__delitem__ deleting indexed values
+__iter__ iteration over objects (e.g. in for loops)
+__contains__
+EX:
+import random
+class VagueList:
+    def __init__(self,cont):
+        self.cont=cont
+    def __getitem__(self,index);
+        return self.cont[index + random.randint(-1,1)]
+    def __len__(self):
+        return random.randint(0, len(self.cont)*2)
+vague_list = VagueList(["A", "B", "C", "D", "E"])
+print(len(vague_list))
+print(len(vague_list))
+print(vague_list[2])
+print(vague_list[2])    #OUTPUT:    0\n 8\n B\n D\n
+
+magic method call made by x[y]=z?   #+> x.__setitem__(y, z)
