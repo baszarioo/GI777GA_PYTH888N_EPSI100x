@@ -226,3 +226,25 @@ print(vague_list[2])
 print(vague_list[2])    #OUTPUT:    0\n 8\n B\n D\n
 
 magic method call made by x[y]=z?   #+> x.__setitem__(y, z)
+class Shape:
+    def __init__(self, w, h)L
+        self.width=w
+        self.height=h
+    def area(self):
+        return self.width * self.height
+    def __add__(self,other):
+        return Shape(self.width + other.width, self.height + other.height)
+    def __gt__ (self,other):
+        return self.area()>other.area()
+w1=int(input())
+h1=int(input())
+w2=int(input())
+h2=int(input())
+
+s1=Shape(w1,h1)
+s2=Shape(w2,h2)
+result=s1+s2
+print(result.area())
+print(s1>s2)
+
+f
