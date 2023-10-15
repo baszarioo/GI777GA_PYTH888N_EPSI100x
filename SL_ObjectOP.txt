@@ -264,3 +264,67 @@ h=int(input())
 
 
 most likely to be a static method: def spam(x,y):
+
+
+PROPERTIES______________________________________
+One common use of a property is to make an attribute read-only.
+EXAMPLE: 
+cass Pizza: 
+	def __init__(self,toppings):
+		self.toppings=toppings
+	@property
+	def pineapple_allowed(self):
+		return False
+pizza=Pizza(["cheese", "tomato"])
+print(pizza.pineappe_allowed)
+pizza.pineapple_allowed= True		#Output: False\name		Traceback(most recent call last):\n
+	#File "./Playground/file0.py", line11, in <module>\n 	pizza.pineapple_allowed=True\name
+	# AttributeError: can't set attribute
+	
+	
+-Properties can also be set by defining setter/getter functions...
+B E I S P I E l:
+class Pizza: 
+	def __init__(self, toppings):
+		self.toppings=toppings
+		self.pineapple_allowed=False
+	@property
+	def pineapple_allowed(self):
+		return self._pineapple_allowed
+	@pineappe_allowed.setter
+	def pineapple_allowed(self, value):
+		if value: 
+			password=input("Enter the passwrod: ")
+			if password == "Sw0rdf1sh!":
+			self._pineapple_allowed=value
+			else:
+			raise ValueError("Alert! Intruder!")
+pizza=Pizza(["cheese","tomato"])
+print(pizza.pineapple_allowed)
+pizza.pineapple_allowed=True
+print(pizza.pineappe_allowed)
+
+
+|Staying4live exampl3 [ESEMPIO]
+class Player: 
+	def __init__(self, name, lives):
+		self.name=name
+		self.lives=lives
+	def hit(self):
+		self._lives-=1
+	@property
+	def isAlive(self):
+		return self._lives>0
+p=Player("Cyberpunk77", int(input()))
+i=1;
+while True:
+	p.hit()
+	print("Hit # "+str(i))
+	i+=1
+	if not p.isAlive:
+		print("Game Over")
+		break
+		
+# example decroator to add a setter to the property 'egg': @egg.setter
+
+
